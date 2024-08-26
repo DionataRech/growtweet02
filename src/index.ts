@@ -3,6 +3,7 @@ import * as dotenv from "dotenv";
 import userRoutes from "./routes/user.routes";
 import authRoutes from "./routes/auth.routes";
 import tweetsRoutes from "./routes/tweets.routes";
+import likesRoutes from "./routes/likes.routes";
 
 dotenv.config();
 const app = express();
@@ -12,6 +13,7 @@ const port = process.env.PORT;
 app.use("/users", userRoutes());
 app.use("/auth", authRoutes());
 app.use("/tweets", tweetsRoutes());
+app.use("/", likesRoutes());
 
 app.listen(port, () => {
   console.log(`------ Server is runing ${port} -------`);

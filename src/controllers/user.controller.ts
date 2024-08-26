@@ -54,7 +54,7 @@ class UserController {
       });
       return res.status(200).json({
         success: true,
-        msg: `Aqui esta seu usuario.`,
+        msg: "Its is a User",
         data: showUser,
       });
     } catch (error) {
